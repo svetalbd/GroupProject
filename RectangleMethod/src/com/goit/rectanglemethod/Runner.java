@@ -15,7 +15,7 @@ public class Runner {
 
 
         System.out.println("Input your integral. Use operators like /, *, -, + ,. ,sin. cos. tg, arctan, (, )." +
-                " Variable must be named \"x\", \"y\" or \"z\":");
+                " Variable must be named \"x\", \"y\" or \"z\\. For example, sin (((x) * 10) / 25)^2): ");
         Scanner sc = new Scanner(System.in);
         String expression = sc.nextLine();
 
