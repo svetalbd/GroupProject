@@ -33,10 +33,20 @@ public class LowerUpperLimits {
     }
 
     public Boolean correctBorderInput (Double lowerBorder, double upperBorder){
-        if ((upperBorder - lowerBorder) <= 0) {
+        if ((upperBorder - lowerBorder) < 0d) {
+            setLowerBorder(upperBorder);
+            setUpperBorder(lowerBorder);
             return false;
         } else {
             return true;
+        }
+    }
+
+    public Boolean correctCountOfStepsInput (Double lowerBorder, double upperBorder, Integer countOfSteps){
+        if ((upperBorder - lowerBorder)/countOfSteps > 0.00001) {
+            return true;
+        } else {
+            return false;
         }
     }
 

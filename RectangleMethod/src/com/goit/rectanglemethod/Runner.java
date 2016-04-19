@@ -42,8 +42,10 @@ public class Runner {
             try {
                 sc = new Scanner(System.in);
                 upperBorder = sc.nextDouble();
-                lowerUpperLimits.setUpperBorder(upperBorder);
-                correctValue = true;
+                if (!lowerBorder.equals(upperBorder)) {
+                    lowerUpperLimits.setUpperBorder(upperBorder);
+                    correctValue = true;
+                }
             } catch (InputMismatchException e) {
                 System.out.println("ERROR: it must be a number.");
                 correctValue = false;
@@ -52,9 +54,8 @@ public class Runner {
 
         if (!lowerUpperLimits.correctBorderInput(lowerUpperLimits.getLowerBorder(), lowerUpperLimits.getUpperBorder())) {
             System.out.println("Upper border is smaller than lower border. The boundaries are reversed.");
-            lowerUpperLimits.setLowerBorder(upperBorder);
-            lowerUpperLimits.setUpperBorder(lowerBorder);
         }
+
 
         correctValue = false;
         while (!correctValue) {
@@ -63,8 +64,12 @@ public class Runner {
                 sc = new Scanner(System.in);
                 Integer countOfSteps = sc.nextInt();
                 if (countOfSteps > 0) {
-                    lowerUpperLimits.setCountOfSteps(countOfSteps);
-                    correctValue = true;
+                    if (lowerUpperLimits.correctCountOfStepsInput(lowerUpperLimits.getLowerBorder(),
+                            lowerUpperLimits.getUpperBorder(), countOfSteps))
+                    {
+                        lowerUpperLimits.setCountOfSteps(countOfSteps);
+                        correctValue = true;
+                    }
                 } else {
                     System.out.println("ERROR: Count of steps must be more than 0.");
                     correctValue = false;
