@@ -1,17 +1,32 @@
 package test;
 
-import com.goit.rectanglemethod.AbstractRectangleMethod;
+import com.goit.rectanglemethod.CenterRectangleMethod;
+import com.goit.rectanglemethod.ConvertFunctionToRPN;
+import org.junit.Assert;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
- * Created by ZahornyiAI on 19.04.2016.
+ * Created by Сергей on 19.04.2016.
  */
-public class RightRectangleMethodTest extends AbstractRectangleMethod {
-    public RightRectangleMethodTest(String expression) {
-        super(expression);
+public class RightRectangleMethodTest {
+    private static   String expression="x+2";
+    public String getExpression() {
+        return expression;
     }
 
-    public double rightCornerRM (Double lowerBorder, Double upperBorder, Integer countOfSteps) {
-
+    public void setExpression(String expression) {
+        this.expression = expression;
+    }
+    @Test
+    public void testRightCornerRM() throws Exception {
+        double lowerBorder=5;
+        double upperBorder=10;
+        int countOfSteps=2;
+        CenterRectangleMethod centerRectangleMethod = new CenterRectangleMethod(expression);
+        ConvertFunctionToRPN convertFunctionToRPN = new ConvertFunctionToRPN();
         Double result;
         Double deltaX = (upperBorder - lowerBorder) / countOfSteps;
         Double[] array = new Double[countOfSteps];
@@ -22,6 +37,9 @@ public class RightRectangleMethodTest extends AbstractRectangleMethod {
             result = result + deltaX * convertFunctionToRPN.calculateIntegral(expression, array[i]);
 
         }
-        return result;
+
+        double expected=53.75;
+
+        Assert.assertEquals(expected,result,0);
     }
 }
