@@ -5,8 +5,8 @@ import com.goit.rectanglemethod.AbstractRectangleMethod;
 /**
  * Created by ZahornyiAI on 19.04.2016.
  */
-class LeftRectangleMethod extends AbstractRectangleMethod {
-    public LeftRectangleMethod(String expression) {
+public class LeftRectangleMethodTest extends AbstractRectangleMethod {
+    public LeftRectangleMethodTest(String expression) {
         super(expression);
     }
 
