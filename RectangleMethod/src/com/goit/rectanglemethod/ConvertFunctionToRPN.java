@@ -104,8 +104,8 @@ public class ConvertFunctionToRPN {
         while (!listOfConversationsToRPN.isEmpty()) {
             rpn.append(" ").append(listOfConversationsToRPN.remove(0));
         }
-
         return rpn.toString();
+
     }
 
 
@@ -129,7 +129,7 @@ public class ConvertFunctionToRPN {
                         result.push(new Double(e));
                     } catch (NumberFormatException ex) {
                         System.out.println("ERROR: an error in the recording of expression. ");
-                        System.exit(-1);
+                        break;
                     }
                 }
             } else {
@@ -189,7 +189,7 @@ public class ConvertFunctionToRPN {
                             break;
                         default:
                             System.out.println("ERROR: an error in the recording of expression. ");
-                            System.exit(-1);
+                            break;
                     }
                 } catch (EmptyStackException ex){
                     System.out.println("ERROR: Entry expression is wrong.");
