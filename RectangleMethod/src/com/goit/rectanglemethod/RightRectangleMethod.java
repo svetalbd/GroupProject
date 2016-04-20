@@ -1,7 +1,7 @@
 package com.goit.rectanglemethod;
 
 /**
- * Created by Сергей on 12.04.2016.
+ * Created by Mykhailenko Svitlana on 12.04.2016.
  */
 public class RightRectangleMethod extends AbstractRectangleMethod {
 
