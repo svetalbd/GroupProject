@@ -8,7 +8,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by Сергей on 18.04.2016.
+ * Created by ZagornyyA on 18.04.2016.
  */
 public class CenterRectangleMethodTest {
 
