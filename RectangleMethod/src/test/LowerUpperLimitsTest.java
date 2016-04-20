@@ -12,7 +12,7 @@ import java.util.Collection;
 import static org.junit.Assert.*;
 
 /**
- * Created by Сергей on 19.04.2016.
+ * Created by Mykhailenko Svitlana on 19.04.2016.
  */
 @RunWith(value = Parameterized.class)
 public class LowerUpperLimitsTest {
