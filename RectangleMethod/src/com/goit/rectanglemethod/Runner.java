@@ -110,14 +110,14 @@ public class Runner {
                     CenterRectangleMethod centerCornerRectangleMethod = new CenterRectangleMethod(expression);
                     Double areaCC = centerCornerRectangleMethod.centerCornerRM(lowerUpperLimits.getLowerBorder(),
                             lowerUpperLimits.getUpperBorder(), lowerUpperLimits.getCountOfSteps());
-                    System.out.printf("Area of integral is %5.5f" , areaCC);
+                    System.out.printf("Area of integral is %.5f" , areaCC);
                     correctValue = true;
                     break;
                 case 3: //метод правых прямоугольников
                     RightRectangleMethod rightRectangleMethod = new RightRectangleMethod(expression);
                     Double areaRC = rightRectangleMethod.rightCornerRM(lowerUpperLimits.getLowerBorder(),
                             lowerUpperLimits.getUpperBorder(), lowerUpperLimits.getCountOfSteps());
-                    System.out.printf("Area of integral is %5.5f" , areaRC);
+                    System.out.printf("Area of integral is %.5f" , areaRC);
                     correctValue = true;
                     break;
                 default:
