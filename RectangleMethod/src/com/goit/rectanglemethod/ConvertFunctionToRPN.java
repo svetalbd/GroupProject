@@ -37,6 +37,7 @@ public class ConvertFunctionToRPN {
     private String preChange (String newFunction){
         newFunction = newFunction.replaceAll(" ", "");
         newFunction = newFunction.replaceAll(",", ".");
+        newFunction = newFunction.toLowerCase();
         return newFunction;
     }
 
@@ -117,10 +118,10 @@ public class ConvertFunctionToRPN {
 
         for (int i = 0; i < delims.length; i++) {
             String e = delims[i];
-            if (!OPERATORS.keySet().contains(e)) {
-                if (e.equals("pi") || e.equals("Pi") || e.equals("PI")) {
+            if (!OPERATORS.containsKey(e)) {
+                if (e.equals("pi")) {
                     result.push(Math.PI);
-                } else if (e.equals("e") || e.equals("E")) {
+                } else if (e.equals("e")) {
                     result.push(Math.E);
                 } else if (delims[i].equals("x") || delims[i].equals("y") || delims[i].equals("z")) {
                     result.push(x);

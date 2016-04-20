@@ -81,9 +81,6 @@ public class Runner {
             }
         }
 
-
-
-
         correctValue = false;
         boolean isInteger = false;
         Integer choice = null;
