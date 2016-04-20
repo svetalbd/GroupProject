@@ -9,7 +9,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by Сергей on 19.04.2016.
+ * Created by ZahornyiAI on 19.04.2016.
  */
 public class RightRectangleMethodTest {
     private static   String expression="x+2";
