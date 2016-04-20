@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Created by Сергей on 12.04.2016.
+ * Created by Mykhailenko Svitlana on 12.04.2016.
  */
 public class Runner {
 
