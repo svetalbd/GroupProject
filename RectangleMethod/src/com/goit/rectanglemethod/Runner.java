@@ -103,7 +103,7 @@ public class Runner {
                     LeftRectangleMethod leftRectangleMethod = new LeftRectangleMethod(expression);
                     Double area = leftRectangleMethod.leftCornerRM(lowerUpperLimits.getLowerBorder(),
                             lowerUpperLimits.getUpperBorder(), lowerUpperLimits.getCountOfSteps());
-                    System.out.printf("Area of integral is %5.5f" , area);
+                    System.out.printf("Area of integral is %.5f" , area);
                     correctValue = true;
                     break;
                 case 2: //метод центральных прямоугольников
